@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Flashcards</title>
+<style>
+  :root { --bg:#f7f7f7; --fg:#222; --card:#fff; --muted:#888; --border:#ddd; --accent:#2563eb; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg:#111; --fg:#eee; --card:#1c1c1c; --muted:#999; --border:#333; --accent:#60a5fa; }
+  }
+  * { box-sizing: border-box; }
+  body { margin:0; font:16px/1.5 system-ui, sans-serif; background:var(--bg); color:var(--fg); }
+  .app { display:flex; gap:24px; max-width:860px; margin:0 auto; padding:16px; }
+  nav { width:190px; flex-shrink:0; }
+  nav button { display:flex; justify-content:space-between; gap:8px; width:100%; text-align:left;
+               border:none; background:none; padding:8px 12px; margin-bottom:2px; }
+  nav button:hover { background:var(--card); }
+  nav button.active { background:var(--card); color:var(--accent); font-weight:600; }
+  main { flex:1; min-width:0; }
+  h1 { font-size:1.2rem; margin:8px 0 16px; }
+  /* Phones: sidebar becomes a scrollable row above the card */
+  @media (max-width:640px) {
+    .app { flex-direction:column; gap:8px; }
+    nav { width:auto; display:flex; gap:4px; overflow-x:auto; scrollbar-width:none; }
+    nav button { width:auto; white-space:nowrap; margin:0; }
+  }
+  .card { perspective:1000px; cursor:pointer; user-select:none; }
+  .inner { display:grid; transition:transform .45s ease; transform-style:preserve-3d; }
+  .card.flipped .inner { transform:rotateY(180deg); }
+  .card.instant .inner { transition:none; }
+  .face { grid-area:1/1; min-height:220px; background:var(--card); border:1px solid var(--border); border-radius:12px;
+          display:flex; align-items:center; justify-content:center; text-align:center; padding:24px;
+          font-size:1.4rem; white-space:pre-wrap; word-break:break-word;
+          backface-visibility:hidden; -webkit-backface-visibility:hidden; }
+  .face.back { transform:rotateY(180deg); border-color:var(--accent); }
+  .row { display:flex; gap:8px; align-items:center; margin-top:12px; }
+  .grow { flex:1; }
+  .muted { color:var(--muted); font-size:.9rem; }
+  button { font:inherit; color:inherit; background:var(--card); border:1px solid var(--border);
+           border-radius:8px; padding:6px 12px; cursor:pointer; }
+</style>
+</head>
+<body>
+<div class="app">
+<nav id="nav"></nav>
+<main>
+  <h1 id="title">Flashcards</h1>
+  <div id="card" class="card">
+    <div class="inner">
+      <div id="front" class="face">Loading…</div>
+      <div id="back" class="face back"></div>
+    </div>
+  </div>
+  <div class="row">
+    <button id="prev">←</button>
+    <button id="next">→</button>
+    <span id="pos" class="muted grow"></span>
+    <button id="shuffle">Shuffle</button>
+  </div>
+  <p class="muted">Tap card or press Space to flip · ← → to navigate</p>
+</main>
+</div>
+
+<script>
+const $ = id => document.getElementById(id);
+let decks = {}, current = null, deck = [], i = 0, flipped = false;
+
+// A line "front | back" starts a card; following lines (until a blank line)
+// are added to the back, each on its own line. Lines starting with # are ignored.
+function parse(text) {
+  const out = [];
+  let card = null;
+  for (const raw of text.split('\n')) {
+    const l = raw.trim();
+    if (l.startsWith('#')) continue;
+    if (!l) { card = null; continue; }
+    if (l.includes('|')) {
+      const k = l.indexOf('|');
+      card = { front: l.slice(0, k).trim(), back: l.slice(k + 1).trim() };
+      out.push(card);
+    } else if (card) {
+      card.back += '\n' + l;
+    }
+  }
+  return out;
+}
+
+function render() {
+  $('card').classList.toggle('flipped', flipped);
+  if (!deck.length) {
+    $('front').textContent = current ? `No cards in ${current}.js` : 'No categories yet';
+    $('back').textContent = '';
+    $('pos').textContent = '';
+    return;
+  }
+  const c = deck[i];
+  $('front').textContent = c.front;
+  $('back').textContent = c.back;
+  $('pos').textContent = `${i + 1} / ${deck.length}`;
+}
+
+// Switch cards without animating, so the next card's answer never flashes by.
+function jump() {
+  const el = $('card');
+  el.classList.add('instant');
+  flipped = false;
+  render();
+  void el.offsetWidth; // apply the un-flip before turning animation back on
+  el.classList.remove('instant');
+}
+
+function go(d) {
+  if (!deck.length) return;
+  i = (i + d + deck.length) % deck.length;
+  jump();
+}
+const flip = () => { flipped = !flipped; render(); };
+
+$('card').onclick = flip;
+$('prev').onclick = () => go(-1);
+$('next').onclick = () => go(1);
+$('shuffle').onclick = () => {
+  for (let j = deck.length - 1; j > 0; j--) {
+    const k = Math.floor(Math.random() * (j + 1));
+    [deck[j], deck[k]] = [deck[k], deck[j]];
+  }
+  i = 0; jump();
+};
+document.addEventListener('keydown', e => {
+  if (e.key === ' ') { e.preventDefault(); flip(); }
+  if (e.key === 'ArrowLeft') go(-1);
+  if (e.key === 'ArrowRight') go(1);
+});
+
+function select(name) {
+  current = name;
+  deck = [...(decks[name] || [])];
+  i = 0;
+  $('title').textContent = name;
+  for (const b of $('nav').children) b.classList.toggle('active', b.dataset.name === name);
+  history.replaceState(null, '', '#' + encodeURIComponent(name));
+  jump();
+}
+
+function buildNav() {
+  $('nav').replaceChildren(...CATEGORIES.map(name => {
+    const b = document.createElement('button');
+    b.dataset.name = name;
+    const label = document.createElement('span');
+    label.textContent = name;
+    const count = document.createElement('span');
+    count.className = 'muted';
+    count.textContent = decks[name] ? decks[name].length : '!';
+    b.append(label, count);
+    b.onclick = () => select(name);
+    return b;
+  }));
+}
+
+// Load a script file (works when double-clicked and on GitHub Pages).
+// The ?timestamp makes the browser always grab the latest version instead of a cached one.
+function load(src) {
+  return new Promise(resolve => {
+    const s = document.createElement('script');
+    s.src = src + '?' + Date.now();
+    s.onload = () => resolve(true);
+    s.onerror = () => resolve(false);
+    document.head.append(s);
+  });
+}
+
+// Each category file calls cards(`...`) — store them under the file being loaded.
+let loading = null;
+function cards(text) { decks[loading] = parse(text); }
+
+(async () => {
+  if (!await load('categories/index.js') || typeof CATEGORIES === 'undefined') {
+    $('front').textContent = 'Could not load categories/index.js';
+    return;
+  }
+  for (const name of CATEGORIES) {   // one at a time so each file lands in the right category
+    loading = name;
+    await load('categories/' + encodeURIComponent(name) + '.js');
+  }
+  buildNav();
+  const fromUrl = decodeURIComponent(location.hash.slice(1));
+  if (CATEGORIES.length) select(CATEGORIES.includes(fromUrl) ? fromUrl : CATEGORIES[0]);
+  else render();
+})();
+</script>
+</body>
+</html>

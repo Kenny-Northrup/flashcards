@@ -1,0 +1,612 @@
+# Master list. Everything below is paste-ready for any file in categories/:
+# copy any card (both lines), or a whole section including its # heading,
+# and paste it between the backticks. # lines are ignored by the page.
+
+# People & pronouns (20)
+I (neutral) | tôi
+toy →
+
+I / we (casual) | mình
+ming ↘
+
+I (close friends only, can be rude) | tao
+tow →
+
+you (close friends only, can be rude) | mày
+my ↘
+
+you / friend | bạn
+bahn ↓
+
+you (older guy) / bro | anh
+ahn →
+
+you (older woman) / sis | chị
+chee ↓
+
+you or me (the younger person) | em
+em →
+
+we / us | tụi mình
+tooy ming ↓↘
+
+they / those guys | tụi nó
+tooy naw ↓↗
+
+he / she / it | nó
+naw ↗
+
+who / anyone | ai
+eye →
+
+person | người
+ngoo-ee ↘
+
+dad | ba
+bah →
+
+mom | má
+mah ↗
+
+grandpa / old man | ông
+ohm →
+
+grandma / old lady | bà
+bah ↘
+
+kid / child | con
+kawn →
+
+friends | bạn bè
+bahn beh ↓↘
+
+boyfriend / girlfriend | bồ
+boh ↘
+
+# Questions (10)
+what | gì
+yee ↘
+
+why / how | sao
+sow →
+
+where | đâu
+dow →
+
+which | nào
+now ↘
+
+when | khi nào
+khee now →↘
+
+how much | bao nhiêu
+bow nyew →
+
+how many | mấy
+may ↗
+
+huh? / right? | hả
+hah ↘↗
+
+wait, what? | ủa
+oo-ah ↘↗
+
+what’s wrong? | sao vậy
+sow yay →↓
+
+# Verbs (50)
+to be | là
+lah ↘
+
+have / there is | có
+kaw ↗
+
+go | đi
+dee →
+
+arrive / come | tới
+tuh-ee ↗
+
+go back / home | về
+yay ↘
+
+do / make | làm
+lahm ↘
+
+eat | ăn
+ahn →
+
+drink | uống
+wohng ↗
+
+sleep | ngủ
+ngoo ↘↗
+
+say / talk | nói
+noy ↗
+
+know | biết
+bee-ek ↗
+
+want | muốn
+mwohng ↗
+
+like | thích
+tick ↗
+
+love | yêu
+yew →
+
+see / feel | thấy
+tay ↗
+
+look at | nhìn
+nyin ↘
+
+hear / listen | nghe
+ngeh →
+
+understand | hiểu
+hew ↘↗
+
+remember / miss | nhớ
+nyuh ↗
+
+forget | quên
+wen →
+
+wait | chờ
+chuh ↘
+
+buy | mua
+moo-uh →
+
+sell | bán
+bahn ↗
+
+give / let | cho
+chaw →
+
+take / grab | lấy
+lay ↗
+
+need | cần
+kuhng ↘
+
+can / OK / get | được
+duh-uhk ↓
+
+play / hang out | chơi
+chuh-ee →
+
+study / learn | học
+hawk ↓
+
+call | gọi
+goy ↓
+
+ask | hỏi
+hoy ↘↗
+
+reply | trả lời
+chah luh-ee ↘↗↘
+
+open / turn on | mở
+muh ↘↗
+
+turn off | tắt
+taht ↗
+
+sit | ngồi
+ngoy ↘
+
+run | chạy
+chai ↓
+
+cook | nấu
+now ↗
+
+shower | tắm
+tahm ↗
+
+wear | mặc
+mahk ↓
+
+text | nhắn tin
+nyahn tin ↗→
+
+watch | coi
+koy →
+
+look for | tìm
+tim ↘
+
+use | xài
+sigh ↘
+
+done / finished | xong
+sawng →
+
+think | nghĩ
+ngee ↘↗
+
+live | sống
+sohng ↗
+
+help | giúp
+yoop ↗
+
+meet | gặp
+gahp ↓
+
+chat | nói chuyện
+noy chwee-en ↗↓
+
+take a photo | chụp hình
+choop hing ↓↘
+
+# Describing words (35)
+good | tốt
+toht ↗
+
+good / interesting | hay
+hi →
+
+pretty / nice | đẹp
+dep ↓
+
+ugly / bad | xấu
+sow ↗
+
+tasty | ngon
+ngawng →
+
+bad / lame | dở
+yuh ↘↗
+
+fun / happy | vui
+yooy →
+
+sad | buồn
+bwohng ↘
+
+tired | mệt
+met ↓
+
+hungry | đói
+doy ↗
+
+full | no
+naw →
+
+thirsty | khát
+khaht ↗
+
+hot | nóng
+nawng ↗
+
+cold | lạnh
+lahn ↓
+
+pricey | mắc
+mahk ↗
+
+cheap | rẻ
+reh ↘↗
+
+big | lớn
+luhng ↗
+
+small | nhỏ
+nyaw ↘↗
+
+a lot | nhiều
+nyew ↘
+
+a little | ít
+it ↗
+
+new | mới
+muh-ee ↗
+
+old (for things) | cũ
+koo ↘↗
+
+old (for people) | già
+yah ↘
+
+easy | dễ
+yay ↘↗
+
+hard | khó
+khaw ↗
+
+quick | lẹ
+leh ↓
+
+slow | chậm
+chuhm ↓
+
+far | xa
+sah →
+
+near | gần
+guhng ↘
+
+right / correct | đúng
+doong ↗
+
+wrong | sai
+sigh →
+
+busy | bận
+buhng ↓
+
+free (not busy) | rảnh
+rahn ↘↗
+
+cute | dễ thương
+yay tuh-uhng ↘↗→
+
+wow / crazy | ghê
+gay →
+
+# Little words & particles (40)
+no / not / (question ending) | không
+khohm →
+
+casual “không” | hông
+hohm →
+
+yes (polite) | dạ
+yah ↓
+
+yeah | ừ
+ư ↘ (an “oo” sound said with unrounded, smiling lips)
+
+oh / uh-huh | ờ
+uh ↘
+
+already / done | rồi
+roy ↘
+
+not yet / ...yet? | chưa
+chuh-uh →
+
+did (past) | đã
+dah ↘↗
+
+will | sẽ
+seh ↘↗
+
+-ing (right now) | đang
+dahng →
+
+also / too | cũng
+koom ↘↗
+
+very | rất
+ruht ↗
+
+very (comes after the word) | lắm
+lahm ↗
+
+so / too | quá
+wah ↗
+
+that’s it / just | thôi
+toy →
+
+only | chỉ
+chee ↘↗
+
+more / again | nữa
+nuh-uh ↘↗
+
+too / right away | luôn
+lwohng →
+
+okay? (soft ending) | nha
+nyah →
+
+but / (emphasis) | mà
+mah ↘
+
+hey / here | nè
+neh ↘
+
+so / like that | vậy
+yay ↓
+
+then | thì
+tee ↘
+
+if | nếu
+nay-oo ↗
+
+with / and | với
+yuh-ee ↗
+
+and | và
+yah ↘
+
+but | nhưng
+nyuhng →
+
+because | tại vì
+tie yee ↓↘
+
+so / therefore | nên
+nayng →
+
+really | thiệt
+tee-ek ↓
+
+probably | chắc
+chahk ↗
+
+right away | liền
+lee-eng ↘
+
+all / used up | hết
+het ↗
+
+this | này
+nai ↘
+
+that / there | đó
+daw ↗
+
+that over there | kia
+kee-uh →
+
+here | đây
+day →
+
+at / to live | ở
+uh ↘↗
+
+of / ‘s | của
+koo-uh ↘↗
+
+so that / to | để
+day ↘↗
+
+# Time (12)
+now | bây giờ
+bay yuh →↘
+
+today | hôm nay
+hohm nai →
+
+yesterday | hôm qua
+hohm wah →
+
+tomorrow | ngày mai
+ngai my ↘→
+
+morning | sáng
+sahng ↗
+
+noon | trưa
+chuh-uh →
+
+afternoon | chiều
+chew ↘
+
+evening | tối
+toy ↗
+
+day | ngày
+ngai ↘
+
+week | tuần
+twuhng ↘
+
+month | tháng
+tahng ↗
+
+a moment ago | hồi nãy
+hoy nai ↘↘↗
+
+# Everyday things (13)
+home / house | nhà
+nyah ↘
+
+water | nước
+nuh-uhk ↗
+
+rice / meal | cơm
+kuhm →
+
+money | tiền
+tee-eng ↘
+
+car / motorbike | xe
+seh →
+
+phone | điện thoại
+dee-eng twai ↓↓
+
+stuff | đồ
+doh ↘
+
+place / spot | chỗ
+choh ↘↗
+
+thing (classifier) | cái
+kai ↗
+
+café / restaurant | quán
+wahng ↗
+
+coffee | cà phê
+kah feh ↘→
+
+story / matter | chuyện
+chwee-eng ↓
+
+name | tên
+tayng →
+
+# Numbers (10)
+1 | một
+moht ↓
+
+2 | hai
+hai →
+
+3 | ba
+bah →
+
+4 | bốn
+bohng ↗
+
+5 | năm
+nahm →
+
+6 | sáu
+sow ↗
+
+7 | bảy
+bai ↘↗
+
+8 | tám
+tahm ↗
+
+9 | chín
+chin ↗
+
+10 | mười
+muh-ee ↘
+
+# Everyday phrases (10)
+hi / bye | chào
+chow ↘
+
+thanks | cám ơn
+kahm uhn ↗→
+
+sorry / excuse me | xin lỗi
+sin loy →↘↗
+
+no worries | không sao
+khohm sow →
+
+alright | được rồi
+duh-uhk roy ↓↘
+
+exactly! | đúng rồi
+doong roy ↗↘
+
+oh my god | trời ơi
+choy uh-ee ↘→
+
+hey! (calling someone) | ơi
+uh-ee →
+
+cheers! | dô
+yoh →
+
+eaten yet? (a casual “how are you”) | ăn cơm chưa?
+ahn kuhm chuh-uh →
